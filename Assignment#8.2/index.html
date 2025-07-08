@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8</title>
+</head>
+
+<body>
+    <script>
+
+        // Question#1 
+
+        function showDateTime() {
+            let now = new Date();
+            document.write("Current Date and Time: " + now);
+        }
+
+        showDateTime();
+
+        //questin#2
+
+        function greetUser(firstName, lastName) {
+            let fullName = firstName + " " + lastName;
+            document.write("Hello, " + fullName + "!");
+        }
+
+        greetUser("John", "Doe");
+
+        //question #3
+
+        function addNumbers() {
+            let num1 = +prompt("Enter first number:");
+            let num2 = +prompt("Enter second number:");
+            let sum = num1 + num2;
+            return sum;
+        }
+
+        document.write("Sum: " + addNumbers());
+
+
+
+        //Question #4
+
+        function calculator(num1, num2, operator) {
+            let result;
+            if (operator === '+') {
+                result = num1 + num2;
+            } else if (operator === '-') {
+                result = num1 - num2;
+            } else if (operator === '*') {
+                result = num1 * num2;
+            } else if (operator === '/') {
+                result = num1 / num2;
+            } else {
+                result = "Invalid operator!";
+            }
+            document.write("Result: " + result);
+        }
+
+        calculator(10, 5, '+');
+
+
+        //Question #5
+
+        function square(num) {
+            return num * num;
+        }
+
+        document.write("Square: " + square(5));
+
+
+        //question #6
+
+        function factorial(n) {
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+                result = result * i;
+            }
+            return result;
+        }
+
+        document.write("Factorial: " + factorial(5));
+
+
+        //question #7
+
+        function countNumbers(start, end) {
+            for (let i = start; i <= end; i++) {
+                document.write(i + "<br>");
+            }
+        }
+
+        countNumbers(1, 10);
+
+
+        // question #8
+
+        function calculateHypotenuse(base, perpendicular) {
+            function calculateSquare(num) {
+                return num * num;
+            }
+
+            let hypotenuseSquared = calculateSquare(base) + calculateSquare(perpendicular);
+            let hypotenuse = Math.sqrt(hypotenuseSquared);
+            document.write("Hypotenuse: " + hypotenuse);
+        }
+
+        calculateHypotenuse(3, 4);
+
+
+        //question #9.1
+
+        function areaOfRectangle(width, height) {
+            let area = width * height;
+            document.write("Area: " + area + "<br>");
+        }
+
+        areaOfRectangle(5, 10);
+
+        //question #9.2
+        let w = 7;
+        let h = 3;
+        areaOfRectangle(w, h);
+
+
+        //question #10
+
+        function isPalindrome(str) {
+            let reversed = str.split("").reverse().join("");
+            if (str === reversed) {
+                document.write(str + " is a palindrome");
+            } else {
+                document.write(str + " is not a palindrome");
+            }
+        }
+
+        isPalindrome("madam");
+
+
+        //question #11
+
+        function capitalizeWords(str) {
+            let words = str.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+            }
+            return words.join(" ");
+        }
+
+        document.write(capitalizeWords('the quick brown fox'));
+
+
+        //question #12
+
+        function findLongestWord(str) {
+            let words = str.split(" ");
+            let longest = "";
+
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].length > longest.length) {
+                    longest = words[i];
+                }
+            }
+
+            document.write("Longest word: " + longest);
+        }
+
+        findLongestWord('Web Development Tutorial');
+
+
+        //question #13
+
+        function countLetter(str, letter) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === letter) {
+                    count++;
+                }
+            }
+            document.write("Occurrences of '" + letter + "': " + count);
+        }
+
+        countLetter('JSResourceS.com', 'o');
+
+
+        //question #14.1
+
+
+
+        function calcCircumference(radius) {
+            let circumference = 2 * Math.PI * radius;
+            document.write("The circumference is " + circumference + "<br>");
+        }
+
+        calcCircumference(5);
+
+
+
+        //question #14.2
+
+        function calcArea(radius) {
+            let area = Math.PI * radius * radius;
+            document.write("The area is " + area);
+        }
+
+        calcArea(5);
+
+
+    </script>
+</body>
+
+</html>
