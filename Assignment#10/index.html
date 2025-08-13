@@ -11,8 +11,11 @@
 
     <script>
         async function getWheather() {
-            const res = await fetch('https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=c9a55c161aae6ef2eb9665743f3edd37');
-            console.log(res);
+            const res = await fetch('https://api.openweathermap.org/data/2.5/weather?q=islamabad&appid=c9a55c161aae6ef2eb9665743f3edd37&units=metric');
+            const data = await res.json()
+            console.log(data);
+            console.log('City Name: ' + data.name);
+            console.log('Current Weather:  ' + data.weather[0].main);
             
         }
         getWheather();
