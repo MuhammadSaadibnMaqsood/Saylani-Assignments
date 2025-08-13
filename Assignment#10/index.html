@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Wheater app
+    </title>
+</head>
+<body>
+
+    <script>
+        async function getWheather() {
+            const res = await fetch('https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid=c9a55c161aae6ef2eb9665743f3edd37');
+            console.log(res);
+            
+        }
+        getWheather();
+    </script>
+</body>
+</html>
